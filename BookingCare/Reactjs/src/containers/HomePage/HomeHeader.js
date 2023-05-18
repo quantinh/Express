@@ -11,7 +11,6 @@ class HomeHeader extends Component {
 		this.props.changeLanguageAppRedux(language);
 	}
 	render() {
-		console.log('check props', this.props);
 		let language = this.props.language;
 		return (
 			<>
@@ -97,6 +96,7 @@ class HomeHeader extends Component {
 const mapStateToProps = (state) => {
 	return {
 		isLoggedIn: state.user.isLoggedIn,
+		userInfo: state.user.userInfo,
 		language: state.app.language,
 	};
 };
