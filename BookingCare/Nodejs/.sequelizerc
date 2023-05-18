@@ -1,0 +1,12 @@
+const path = require("path");
+
+module.exports = {
+	// Tạo thư mục config trong src làm sao để kết nối với database
+	config: path.resolve("./src/config", "config.json"),
+	// Tạo thư mục migrations trong src
+	"migrations-path": path.resolve("./src", "migrations"),
+	// Tạo thư mục models trong src
+	"models-path": path.resolve("./src", "models"),
+	// Taọ thư mục seeders trong src
+	"seeders-path": path.resolve("./src", "seeders"),
+};
