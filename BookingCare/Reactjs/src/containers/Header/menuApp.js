@@ -28,8 +28,8 @@ export const adminMenu = [
             },
         ]
     },
-    { //quản lí chuyên khoa
-        name: 'menu.admin.specialty', 
+    { //quản lý chuyên khoa
+        name: 'menu.admin.specialty',
         menus: [
             {
                 name: 'menu.admin.manage-specialty', link: '/system/manage-specialty'

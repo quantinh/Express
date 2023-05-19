@@ -5,6 +5,7 @@ import Navigator from '../../components/Navigator';
 import { adminMenu } from './menuApp';
 import './Header.scss';
 import { LANGUAGES } from "../../utils";
+import { FormattedMessage } from 'react-intl';
 
 class Header extends Component {
     handleChangeLanguage = (language) => {

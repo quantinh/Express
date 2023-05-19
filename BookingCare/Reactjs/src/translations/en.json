@@ -23,17 +23,32 @@
     },
     "menu": {
         "admin": {
-            "manage-user": "Users",
+            "manage-user": "Users System",
             "manage-doctor": "Manage doctors",
             "manage-admin": "Manage admins",
             "crud": "CRUD user",
-            "crud-redux": "CRUD redux",
+            "crud-redux": "CRUD Redux",
             "clinic": "Clinics",
-            "manage-clinic": "Mannage clinics",
-            "speciality": "Specialty",
-            "manage-speciality": "Manage Specialties",
+            "manage-clinic": "Manage clinics",
+            "specialty": "Specialty",
+            "manage-specialty": "Manage Specialties",
             "handbook": "Handbook",
             "manage-handbook": "Manage Handbook"
         }
+    },
+    "manage-user": {
+        "add": "Add a new user",
+        "email": "Email",
+        "password": "Password",
+        "first-name": "First name",
+        "last-name": "Last name",
+        "phone-number": "Phone number",
+        "address": "Address",
+        "gender": "Gender",
+        "position": "Position",
+        "role": "Role",
+        "image": "Avatar",
+        "save": "Save user",
+        "edit": "Edit user"
     }
 }
