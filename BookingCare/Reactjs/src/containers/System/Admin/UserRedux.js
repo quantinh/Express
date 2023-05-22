@@ -3,6 +3,8 @@ import { FormattedMessage } from "react-intl";
 import { connect } from "react-redux";
 import { getAllCodeService } from "../../../services/userService";
 import { LANGUAGES } from "../../../utils";
+import * as actions from "../../../store/actions";
+
 class UserRedux extends Component {
 	constructor(props) {
 		super(props);
@@ -30,17 +32,19 @@ class UserRedux extends Component {
 	}
 
 	async componentDidMount() {
-		try {
-			let res = await getAllCodeService("gender");
-			if (res && res.errCode === 0) {
-				this.setState({
-					genderArr: res.data,
-				});
-			}
-			console.log("hoi dan it check res: ", res);
-		} catch (e) {
-			console.error(e);
-		}
+		this.props.getGenderStart();
+		this.props.dispatch(actions.getGenderStart())
+		// try {
+		// 	let res = await getAllCodeService("gender");
+		// 	if (res && res.errCode === 0) {
+		// 		this.setState({
+		// 			genderArr: res.data,
+		// 		});
+		// 	}
+		// 	console.log("hoi dan it check res: ", res);
+		// } catch (e) {
+		// 	console.error(e);
+		// }
 	}
 	
 	render() {
@@ -152,7 +156,11 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchToProps = (dispatch) => {
-	return {};
+	return {
+		getGenderStart: () => dispatch(actions.getGenderStart()),
+		// processLogout: () => dispatch(actions.processLogout()),
+        // changeLanguageAppRedux: (language) => dispatch(actions.changeLanguageApp(language))
+	};
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(UserRedux);
